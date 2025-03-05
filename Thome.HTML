@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KHETHI BAZAAR Home</title>
+  <link rel="stylesheet" href="Thome.css" />
+  <link rel="stylesheet" href="product.css" />
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Google Font: Poppins -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Animate.css -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <!-- Material Symbols Outlined (if needed) -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"
+  />
+</head>
+<body>
+  <nav class="navbar background d-flex justify-content-between align-items-center">
+    <div class="left-nav">
+      <img src="logo.jpg" alt="Logo" class="logo" />
+      <h3>KHETHI BAZAAR</h3>
+    </div>
+    <ul class="nav-list d-flex mb-0">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#signup">Signup</a></li>
+      <li><a href="#login">Login</a></li>
+      <li><a href="#Contact">Contactus</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Hero and Feature Section -->
+  <section class="background firstsection d-flex flex-column align-items-center">
+    <div class="firsthalf hero-content text-center">
+      <h1 class="animate__animated animate__fadeInDown">
+        Fresh Organic Produce, Straight from Nature
+      </h1>
+      <p class="animate__animated animate__fadeInUp">
+        Empowering communities with sustainable and healthy choices.
+      </p>
+    </div>
+    <div class="secondhalf">
+      <div class="row">
+        <div class="col-md-3 feature">
+          <img src="100natural.jpg" alt="100% Organic" />
+          <h3>100% Organic</h3>
+          <p>Guaranteed natural produce for your family.</p>
+        </div>
+        <div class="col-md-3 feature">
+          <img src="fresh produce.jpg" alt="Fresh Produce" />
+          <h3>Fresh Produce</h3>
+          <p>Freshly harvested fruits and vegetables.</p>
+        </div>
+        <div class="col-md-3 feature">
+          <img src="store.jpg" alt="Store Pickup" />
+          <h3>Store Pickup</h3>
+          <p>Conveniently pick up your order from our store.</p>
+        </div>
+        <div class="col-md-3 feature">
+          <img src="homedelivery.jpg" alt="Home Delivery" />
+          <h3>Home Delivery</h3>
+          <p>Get your order delivered straight to your door.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Shop Now Button below the features -->
+    <div class="text-center mt-4">
+      <button type="button" class="btn-custom animate__animated animate__pulse animate__infinite">
+        <a href="#products" style="text-decoration: none; color: inherit;">Shop Now</a>
+      </button>
+    </div>
+  </section>
+  
+  <!-- Products Section -->
+  <section id="products" class="products">
+    <div class="container">
+      <h2 class="text-center mb-5">Available Products</h2>
+      <div class="mb-3 text-center">
+        <label for="filterLocation" class="form-label">Filter by Location:</label>
+        <select id="filterLocation" class="form-select w-auto d-inline-block">
+          <option value="">All Locations</option>
+          <option value="North">North</option>
+          <option value="South">South</option>
+          <option value="East">East</option>
+          <option value="West">West</option>
+        </select>
+      </div>
+      <div class="row" id="productList">
+        <!-- Product cards will be dynamically inserted here -->
+      </div>
+      <div class="text-center newproduct">
+        <a href="product-form.html" class="btn btn-outline-secondary" style="background-color:aliceblue;color: black;">Add New Product</a>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-column">
+          <h4>Categories</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-white">Vegetables</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Fruits</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Spices</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 footer-column">
+          <h4>Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-white">About Us</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Contact Us</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 footer-column">
+          <h4>Contact Us</h4>
+          <ul class="list-unstyled">
+            <li>Email: info@khetibazaar.com</li>
+            <li>Phone: +977-123456789</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <p>&copy; 2025 Kheti Bazaar. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- JavaScript to load products from localStorage -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Retrieve products from localStorage (if any)
+      let products = JSON.parse(localStorage.getItem("products")) || [];
+      let productList = document.getElementById("productList");
+      productList.innerHTML = ""; // Clear any existing content
+      
+      // Loop through stored products and display them
+      products.forEach((product, index) => {
+        productList.innerHTML += `
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="product-card animate__animated animate__fadeInUp">
+              <img src="${product.image}" alt="${product.name}" />
+              <div class="product-details p-3">
+                <h3>${product.name}</h3>
+                <p>$${product.price}</p>
+                <button class="btn btn-primary buy-button" data-index="${index}">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+      
+      // Event delegation for Buy Now buttons
+      productList.addEventListener("click", function (e) {
+        if (e.target && e.target.classList.contains("buy-button")) {
+          let productIndex = e.target.getAttribute("data-index");
+          let product = products[productIndex];
+          alert(product.name + " added to cart!");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

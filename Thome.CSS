@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #2c3e50; /* Primary body text color */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c3e50;
+}
+
+.logo {
+    width: 10%;
+    border: 3px solid black;
+    border-radius: 50px;
+}
+
+.left-nav {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.left-nav h3 {
+    color: #ecf0f1;
+    font-size: 24px;
+}
+
+.nav-list {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-list li {
+    list-style: none;
+    padding: 20px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #ecf0f1; /* Navbar link color */
+    padding: 10px 15px; /* Add padding for button effect */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-list li a:hover {
+    background: #bdc3c7; /* Background color on hover */
+    color: #2c3e50; /* Text color on hover */
+    transform: scale(1.1);
+}
+
+
+.background {
+    background: rgba(0, 0, 0, 0.5) url('bg2.jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+/* Hero Section */
+.firstsection {
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.firsthalf {
+    padding-top: 20px;
+    max-width: 50%;
+    margin: auto;
+    color: #ecf0f1;  /* Light text for hero section */
+}
+
+.firsthalf h1 {
+    font-size: 48px;
+    padding-top: 50px;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s;
+    color: #ecf0f1;
+}
+
+.firsthalf p {
+    font-size: 20px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s;
+    color: #dfe6e9;
+}
+
+.secondhalf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 80px;
+}
+
+.feature {
+    text-align: center;
+    max-width: 200px;
+    color: #ecf0f1; /* Feature text color */
+    padding-top: 80px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+.feature h3 {
+    font-size: 22px;
+    color: #ecf0f1;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #bdc3c7;
+}
+
+.feature img {
+    border: 2px solid black;
+    width: 80px;
+    margin-bottom: 15px;
+    border-radius: 50px;
+    background-size: cover;
+}
+
+/* Green Shop Now Button */
+.btn-custom {
+    background: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-custom:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Products Section */
+.products {
+    padding: 50px 0;
+    background: beige;
+}
+
+.products h2 {
+    color: #2c3e50;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 15px;
+}
+
+.product-details h3 {
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.product-details p {
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+
+.buy-button {
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background: #343a40;
+    color: #ecf0f1;
+    padding: 40px 0;
+}
+
+.footer-column h4 {
+    color: #ffc107;
+}
+
+.footer-column ul li {
+    font-size: 16px;
+    color: #bdc3c7;
+}
